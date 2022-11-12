@@ -1,0 +1,30 @@
+repos:
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.2
+    hooks:
+      - id: codespell
+        args: ["--skip=*.csv", "-L crate,inflight"]
+  - repo: https://github.com/doublify/pre-commit-rust
+    rev: v1.0
+    hooks:
+      - id: fmt
+      - id: clippy
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      # - id: pretty-format-json
+      #   args: ["--autofix"]
+      - id: fix-byte-order-marker
+      - id: check-ast
+      - id: requirements-txt-fixer
+      - id: check-merge-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-symlinks
+      # - id: check-json
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+
+default_language_version:
+  python: python3
