@@ -85,7 +85,7 @@ impl Grid {
 
     // Let the Rover attempt to take N steps in a given direction.
     //
-    // If an obstacle is encountered then stop at the furtherest position
+    // If an obstacle is encountered then stop at the furthest position
     //
     pub fn step(&self, dir: &CardinalDir, location: &Coord, steps: usize) -> Coord {
         let mut count = 0;
