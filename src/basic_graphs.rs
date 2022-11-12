@@ -59,6 +59,17 @@ impl<'a> Graph<'a> {
 }
 
 /// Implementation of the Depth First Search algorithm
+///
+/// DFS(Depth First Search) uses Stack data structure.
+///
+/// DFS is also a traversal approach in which the traverse begins at the root
+/// node and proceeds through the nodes as far as possible until we reach
+/// the node with no unvisited nearby nodes.
+///
+/// DFS builds the tree sub-tree by sub-tree.
+///
+/// It works on the concept of LIFO (Last In First Out).
+///
 pub fn dfs(g: &Graph, root: &Node, target: &Node) -> Option<Vec<usize>> {
     let mut visited = HashSet::new();
     let mut history = Vec::new();
@@ -88,6 +99,15 @@ pub fn dfs(g: &Graph, root: &Node, target: &Node) -> Option<Vec<usize>> {
 
 #[allow(unused_variables)]
 /// Implementation of the Breadth First Search algorithm
+///
+/// BFS(Breadth First Search) uses Queue data structure for finding the shortest path.
+///
+/// BFS is a traversal approach in which we first walk through all nodes on the
+/// same level before moving on to the next level.
+///
+/// BFS builds the tree level by level.
+///
+/// It works on the concept of FIFO (First In First Out).
 pub fn bfs(g: &Graph, root: &Node, target: &Node) -> Option<Vec<usize>> {
     let mut visited = HashSet::new();
     let mut history = Vec::new();
